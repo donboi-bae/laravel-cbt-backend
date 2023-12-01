@@ -4,6 +4,7 @@
 
 @push('style')
     <!-- CSS Libraries -->
+    <link rel="stylesheet" href="{{ asset('library/summernote/dist/summernote-bs4.css') }}">
     <link rel="stylesheet" href="{{ asset('library/bootstrap-daterangepicker/daterangepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('library/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('library/select2/dist/css/select2.min.css') }}">
@@ -36,23 +37,26 @@
                             <h4>Input Text</h4>
                         </div>
                         <div class="card-body">
-                            <div class="form-group">
-                                <label>Pertanyaan</label>
-                                <input type="text"
-                                    class="form-control @error('pertanyaan')
-                                is-invalid
-                            @enderror"
-                                    name="pertanyaan">
-                                @error('pertanyaan')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Pertanyaan</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <textarea class="summernote-simple" type="text"
+                                        class="form-control @error('pertanyaan')
+                                    is-invalid
+                                @enderror"
+                                        name="pertanyaan">
+                                    @error('pertanyaan')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                    </textarea>
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="form-label">Kategori</label>
-                                <div class="selectgroup w-100">
+                            <div class="form-group rom mb-4">
+                                <label class="form-label col-form-label text-md-right col-12 col-md-3 col-lg-3">Kategori</label>
+                                <div class="selectgroup col-sm-12 col-md-7">
                                     <label class="selectgroup-item">
                                         <input type="radio" name="kategori" value="Numeric" class="selectgroup-input"
                                             checked="">
@@ -70,62 +74,70 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label>Jawaban A</label>
-                                <input type="text"
-                                    class="form-control @error('jawaban_a')
-                                is-invalid
-                            @enderror"
-                                    name="jawaban_a">
-                                @error('jawaban_a')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jawaban A</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <input type="text"
+                                        class="form-control @error('jawaban_a')
+                                    is-invalid
+                                @enderror"
+                                        name="jawaban_a">
+                                    @error('jawaban_a')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Jawaban B</label>
-                                <input type="text"
-                                    class="form-control @error('jawaban_b')
-                                is-invalid
-                            @enderror"
-                                    name="jawaban_b">
-                                @error('jawaban_b')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jawaban B</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <input type="text"
+                                        class="form-control @error('jawaban_b')
+                                    is-invalid
+                                @enderror"
+                                        name="jawaban_b">
+                                    @error('jawaban_b')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Jawaban C</label>
-                                <input type="text"
-                                    class="form-control @error('jawaban_c')
-                                is-invalid
-                            @enderror"
-                                    name="jawaban_c">
-                                @error('jawaban_c')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jawaban C</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <input type="text"
+                                        class="form-control @error('jawaban_c')
+                                    is-invalid
+                                @enderror"
+                                        name="jawaban_c">
+                                    @error('jawaban_c')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Jawaban D</label>
-                                <input type="text"
-                                    class="form-control @error('jawaban_d')
-                                is-invalid
-                            @enderror"
-                                    name="jawaban_d">
-                                @error('jawaban_d')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jawaban D</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <input type="text"
+                                        class="form-control  @error('jawaban_d')
+                                    is-invalid
+                                @enderror"
+                                        name="jawaban_d">
+                                    @error('jawaban_d')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="form-label">Kunci</label>
-                                <div class="selectgroup w-100">
+                            <div class="form-group row mb-4">
+                                <label class="form-label col-form-label text-md-right col-12 col-md-3 col-lg-3">Kunci</label>
+                                <div class="selectgroup col-sm-12 col-md-7">
                                     <label class="selectgroup-item">
                                         <input type="radio" name="kunci" value="a" class="selectgroup-input"
                                             checked="">
@@ -148,10 +160,12 @@
                             </div>
 
 
-
-                        <div class="card-footer text-right">
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                <div class="card-footer text-right col-sm-12 col-md-7">
+                                    <button class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
                     </div>
                     </form>
                 </div>
@@ -162,4 +176,5 @@
 @endsection
 
 @push('scripts')
+    <script src="{{ asset('library/summernote/dist/summernote-bs4.js') }}"></script>
 @endpush
